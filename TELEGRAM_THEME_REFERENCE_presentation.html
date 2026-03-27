@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram Theme Reference - Presentation</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+      --accent-2: #38bdf8;
+      --panel: rgba(15, 23, 42, 0.75);
+      --border: rgba(148, 163, 184, 0.45);
+    }
+
+    body.light {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0369a1;
+      --accent-2: #0284c7;
+      --panel: rgba(255, 255, 255, 0.92);
+      --border: rgba(15, 23, 42, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(56, 189, 248, 0.18), transparent 60%),
+        radial-gradient(1000px 500px at 90% 100%, rgba(34, 211, 238, 0.16), transparent 55%),
+        var(--bg);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    body.light {
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(2, 132, 199, 0.12), transparent 60%),
+        radial-gradient(1000px 500px at 90% 100%, rgba(14, 165, 233, 0.1), transparent 55%),
+        var(--bg);
+    }
+
+    .deck {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+    }
+
+    .slide {
+      width: min(1100px, 96vw);
+      height: min(680px, 88vh);
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(2, 6, 23, 0.94));
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 18px;
+      padding: clamp(24px, 3vw, 40px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      display: none;
+      position: relative;
+    }
+
+    body.light .slide {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+      border: 1px solid rgba(15, 23, 42, 0.14);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    }
+
+    .slide.active { display: block; }
+
+    h1, h2 { margin: 0 0 14px; line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 4vw, 3.1rem); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+
+    p, li {
+      font-size: clamp(1rem, 1.5vw, 1.3rem);
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(1rem, 1.3vw, 1.2rem);
+      margin-top: 4px;
+    }
+
+    ul, ol {
+      margin: 14px 0 0;
+      padding-left: 24px;
+    }
+
+    li { margin: 10px 0; }
+
+    .highlight {
+      color: #a5f3fc;
+      font-weight: 600;
+    }
+
+    .footer {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .controls {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    button:hover { border-color: var(--accent-2); }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide active">
+      <span class="pill">Reference Presentation</span>
+      <h1>Telegram Theme Reference</h1>
+      <p class="subtitle">Краткая презентация по файлу <span class="highlight">TELEGRAM_THEME_REFERENCE.md</span></p>
+      <p style="margin-top: 24px;">
+        Проект использует знания из общей базы Telegram-материалов для контента, SEO, AI-воркфлоу и аналитики.
+      </p>
+      <div class="footer">
+        <span>Слайд 1</span>
+        <span>← / → для навигации</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Ключевые источники</h2>
+      <ul>
+        <li><span class="highlight">Theme map:</span> WORKSPACE_TELEGRAM\reports\telegram_theme_map.md</li>
+        <li><span class="highlight">Latest catalog:</span> WORKSPACE_TELEGRAM\catalog\telegram_catalog_latest.md</li>
+        <li><span class="highlight">File indexes:</span> WORKSPACE_TELEGRAM\catalog\telegram_files_*.csv</li>
+        <li><span class="highlight">Prompt library:</span> WORKSPACE_TELEGRAM\prompts\PROMPT_LIBRARY.md</li>
+        <li><span class="highlight">Training materials:</span> WORKSPACE_TELEGRAM\learning\THEMATIC_TRAINING.md</li>
+        <li><span class="highlight">Recommendations:</span> WORKSPACE_TELEGRAM\reports\APPLICATION_RECOMMENDATIONS.md</li>
+        <li><span class="highlight">Update log:</span> WORKSPACE_TELEGRAM\logs\WORK_LOG.md</li>
+      </ul>
+      <div class="footer">
+        <span>Слайд 2</span>
+        <span>База данных источников</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Главные переиспользуемые темы</h2>
+      <ol>
+        <li>Content and SEO articles</li>
+        <li>Prompts and AI workflows</li>
+        <li>Site/WordPress development</li>
+        <li>Marketing funnels and conversions</li>
+        <li>Telegram channel content strategy</li>
+        <li>Research and analytical frameworks</li>
+      </ol>
+      <div class="footer">
+        <span>Слайд 3</span>
+        <span>Тематические направления</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Примечание по использованию</h2>
+      <p>
+        Перед подготовкой контент-стратегии, технического задания или набора промптов:
+      </p>
+      <ul>
+        <li>Проверьте <span class="highlight">theme map</span>.</li>
+        <li>Выберите <span class="highlight">1-2 релевантные формулировки</span> из примеров.</li>
+      </ul>
+      <p style="margin-top: 24px; color: var(--muted);">
+        Такой подход ускоряет подготовку материалов и повышает единообразие структуры.
+      </p>
+      <div class="footer">
+        <span>Слайд 4</span>
+        <span>Практический workflow</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="controls">
+    <button id="themeBtn" type="button">Светлая тема</button>
+    <button id="prevBtn" type="button">Назад</button>
+    <button id="nextBtn" type="button">Вперед</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const themeBtn = document.getElementById("themeBtn");
+    const body = document.body;
+    let current = 0;
+
+    function render() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === current);
+      });
+    }
+
+    function next() {
+      current = (current + 1) % slides.length;
+      render();
+    }
+
+    function prev() {
+      current = (current - 1 + slides.length) % slides.length;
+      render();
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", next);
+    document.getElementById("prevBtn").addEventListener("click", prev);
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("light");
+      const isLight = body.classList.contains("light");
+      themeBtn.textContent = isLight ? "Темная тема" : "Светлая тема";
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown") next();
+      if (event.key === "ArrowLeft" || event.key === "PageUp") prev();
+    });
+  </script>
+</body>
+</html>
