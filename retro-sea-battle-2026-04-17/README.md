@@ -26,3 +26,4 @@ Small browser game prototype inspired by the Soviet arcade-style "Sea Battle" ma
 - `game.js`
 - `README.md`
 - `ЛОГ.md`
+pages refresh
