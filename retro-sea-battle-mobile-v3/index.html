@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Sea Battle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hud">
+      <div class="hud__block">
+        <span class="hud__label">Счет</span>
+        <strong id="score">0000</strong>
+      </div>
+      <div class="hud__block">
+        <span class="hud__label">Промахи</span>
+        <strong id="misses">0 / 8</strong>
+      </div>
+      <div class="hud__block">
+        <span class="hud__label">Время</span>
+        <strong id="time">120</strong>
+      </div>
+    </section>
+
+    <section class="cabinet">
+      <div class="cabinet__frame">
+        <canvas id="game" width="960" height="540" aria-label="Игровое поле"></canvas>
+        <div class="screen-overlay"></div>
+        <div class="mobile-actions">
+          <button id="start-button" class="action-button action-button--primary" type="button">Старт / рестарт</button>
+          <div class="control-mode">
+            <span class="control-mode__label">Режим:</span>
+            <button id="mode-buttons" class="mode-button mode-button--active" type="button">Кнопки</button>
+            <button id="mode-touch" class="mode-button" type="button">Палец</button>
+          </div>
+          <div id="touch-controls" class="touch-controls">
+            <button data-control="up" class="action-button" type="button">Вверх</button>
+            <button data-control="fire" class="action-button action-button--accent" type="button">Огонь</button>
+            <button data-control="down" class="action-button" type="button">Вниз</button>
+          </div>
+        </div>
+      </div>
+      <aside class="brief">
+        <p class="brief__title">RETRO SEA BATTLE</p>
+        <p>Держи прицел на линии движения кораблей и запускай торпеды в нужный момент. Раунд теперь длится дольше, а сложность растет плавнее.</p>
+        <div class="brief__keys">
+          <span class="brief__keys-title">Управление</span>
+          <p><strong>W</strong> / <strong>S</strong> двигают прицел вверх и вниз.</p>
+          <p><strong>Стрелка вверх</strong> / <strong>Стрелка вниз</strong> делают то же самое.</p>
+          <p><strong>Пробел</strong> выпускает торпеду.</p>
+          <p><strong>Enter</strong> запускает или перезапускает раунд.</p>
+          <p><strong>Телефон:</strong> выбери режим <strong>Кнопки</strong> или <strong>Палец</strong>.</p>
+        </div>
+        <ul class="brief__controls">
+          <li><span>W / S</span><span>-</span><span>Движение прицела</span></li>
+          <li><span>Вверх / Вниз</span><span>-</span><span>Движение прицела</span></li>
+          <li><span>Пробел</span><span>-</span><span>Выстрел торпедой</span></li>
+          <li><span>Enter</span><span>-</span><span>Старт / рестарт</span></li>
+          <li><span>Палец</span><span>-</span><span>Касание и перетаскивание по полю</span></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
